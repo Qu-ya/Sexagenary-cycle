@@ -24,7 +24,7 @@ namespace 天干地支
             {
                 for (int i = 0; i < 60; i++)
                 {
-                    Console.WriteLine(Convert.ToString(a[x]) + Convert.ToString(b[y]));
+                    value[i] = (Convert.ToString(a[x]) + Convert.ToString(b[y]));
                     if (++x >= a.Length) x = 0;
                     if (++y >= b.Length) y = 0;
                 }
@@ -38,11 +38,15 @@ namespace 天干地支
                 }
                 else
                 {
-                    valuei = year - 4;
+                    valuei = (year - 4);
                 }
-
-                Console.ReadLine();
+                Console.WriteLine(value[valuei]);
             }
+            else
+            {
+                Console.WriteLine("輸入無效");
+            }
+            Console.ReadLine();
         }
     }
 }
